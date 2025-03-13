@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.wrapper {
+    background: grey;
+    border-radius: 15px;
+    max-width: 475px;
+    width: 100%;
+    padding: 25px 25px 15px 25px;
+}
+
+.input-box {
+    padding-top: 10px;
+    border-bottom: 1px solid #e3dddd;
+}
+
+.input-box .post-area{
+    position: relative;
+    min-height: 130px;
+}
+
+.post-area .placeholder {
+    position: absolute;
+    margin-top: -3px;
+    font-size: 22px;
+    color: rgb(187, 187, 187);
+    pointer-events: none;
+}
+
+.post-area .input {
+    outline: none;
+    font-size: 17px;
+    word-wrap: break-word;
+    color: white;
+}
+
+
+.post-area .readonly{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.readonly .highlight{
+    background: #fd9bb0;
+}
+
+.input-box .privacy {
+    color: rgb(219, 214, 214);
+    margin: 15px 0;
+    padding: 7px 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50px;
+    transition: background 0.9s ease;
+}
+
+.input-box .privacy:hover , .icons li:hover{
+    background: rgb(181, 161, 161);
+}
+
+.privacy i{
+    font-size: 18px;
+}
+
+.privacy span{
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 7px;
+}
+
+.bottom {
+    display: flex;
+    margin-top: 13px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom .icons {
+    display: inline-flex;
+}
+
+.icons li {
+    color: white;
+    list-style: none;
+    height: 38px;
+    width: 38px;
+    margin:0 2px;
+    background: grey;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+.bottom .content {
+    display: flex;
+    align-items: center;
+}
+
+.content .counter {
+    display: none;
+    margin-right: 15px;
+    padding-right: 15px;
+    color: rgb(192, 189, 189);
+    border-right: 1px solid #aab8c2;
+}
+
+.content button {
+    padding: 9px 18px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    background: rgb(57, 199, 185);
+    color: white;
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.content button.active {
+    opacity: 1;
+    pointer-events:auto;
+}
+
+.content button:hover {
+    background: turquoise;
+    transition: .4s ease;
+}
